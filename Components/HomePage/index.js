@@ -41,7 +41,7 @@ class HomePage extends Component {
             <Switch>
               <Route exact path="/" render={() => <CoffeList />} />
               <Route path="/CoffeCart" render={() => <CoffeCart />} />
-              <Route path="/CoffeDetail" render={() => <CoffeDetail />} />
+              <Route path="/CoffeDetail/:index" component={CoffeDetail} />
             </Switch>
           </Content>
           <Footer style={{ backgroundColor: "transparent" }}>

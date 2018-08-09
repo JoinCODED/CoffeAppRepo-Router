@@ -21,6 +21,9 @@ import starbucks2 from "../../images/starbucks.jpg";
 // Style
 import styles from "./styles";
 
+// Data
+import list from "../CoffeList/list";
+
 class CoffeDetail extends Component {
   constructor(props) {
     super(props);
@@ -37,6 +40,9 @@ class CoffeDetail extends Component {
       drink: 0,
       option: 0
     };
+  }
+  componentDidMount() {
+    this.setState({ detail: list[this.props.match.params.index] });
   }
   render() {
     return (
